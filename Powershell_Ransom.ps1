@@ -13,6 +13,7 @@ New-Item -Path $Drive/T1091Test1.txt -ItemType "file" -Force -Value "T1091 Test 
 Start-Sleep -S 5
 
 Write-Host "[+] Windows Enumeration" -ForegroundColor Green
+Remove-MpPreference -ExclusionPath "C:\Temp"
 net user | Out-File -FilePath "$outfile\Localenum.txt" -Append
 ls c:\Users\ | Out-File -FilePath "$outfile\Localenum.txt" -Append
 cmdkey.exe /list | Out-File -FilePath "$outfile\Localenum.txt" -Append
