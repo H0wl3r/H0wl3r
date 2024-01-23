@@ -1,4 +1,5 @@
 # Powershell script to simulate Ransomware Spread via USB
+# Ensure you turn off defender to fully allow the script to run!!!
 
 $outfile = "C:\Windows\Temp"
 
