@@ -1,6 +1,6 @@
 
 Add-Type -AssemblyName System.Windows.Forms
-$cycles = 3
+$cycles = 100
 $msgs = @(
 "If you select yes you are dumb"
 "Did you honestly select Yes?"
